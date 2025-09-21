@@ -1137,4 +1137,1107 @@ JOB-12349,ENTERPRISE SOLUTIONS,PART-5005,D,3,35,Released,P12 Dec,2025-01-15,1275
                     showStatus('🎯 Demo mode activated with sample data', 'info');
                 }, 500);
             }
+        });            margin-bottom: 10px;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="file"]:hover,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            resize: vertical;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .secondary-button {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .success-button {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .warning-button {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            display: block;
+        }
+        
+        .tab-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .instructions h3 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            color: #6c757d;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .file-info {
+            background: #f0f4f8;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        
+        .file-info strong {
+            color: #2d3748;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .progress-bar.active {
+            display: block;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s;
+            animation: shimmer 1s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        .preview-container {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .preview-title {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .preview-table {
+            width: 100%;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        
+        .preview-table th,
+        .preview-table td {
+            padding: 6px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        
+        .preview-table th {
+            background: #e9ecef;
+            font-weight: 600;
+        }
+        
+        .preview-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .anonymized-cell {
+            background: #fffbf0;
+            color: #d97706;
+            font-weight: 600;
+        }
+        
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .quick-action-btn {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            color: #495057;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .quick-action-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+            transform: translateY(-1px);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Manufacturing Data Encryption Tool</h1>
+        <p class="subtitle">Secure your manufacturing data for safe demo deployment</p>
+        
+        <div class="quick-actions">
+            <button class="quick-action-btn" onclick="loadSampleData()">📊 Load Sample Data</button>
+            <button class="quick-action-btn" onclick="testEncryption()">🧪 Test Encryption</button>
+            <button class="quick-action-btn" onclick="showHelp()">❓ Help</button>
+        </div>
+        
+        <div class="tab-container">
+            <button class="tab active" onclick="switchTab('encrypt')">🔒 Encrypt Data</button>
+            <button class="tab" onclick="switchTab('decrypt')">🔓 Decrypt Data</button>
+            <button class="tab" onclick="switchTab('preview')">👁️ Preview Data</button>
+        </div>
+        
+        <!-- Encrypt Tab -->
+        <div id="encrypt-tab" class="tab-content active">
+            <div class="input-group">
+                <label for="csvFile">Select CSV File:</label>
+                <input type="file" id="csvFile" accept=".csv,.txt" onchange="handleFileSelect(event)">
+                <div id="fileInfo" class="file-info" style="display:none;"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="encryptPassword">Encryption Password:</label>
+                <input type="password" id="encryptPassword" placeholder="Use the same password as your dashboard login">
+            </div>
+            
+            <div class="input-group">
+                <label for="githubUrl">GitHub Repository URL (optional):</label>
+                <input type="text" id="githubUrl" placeholder="https://github.com/username/dashboard-data">
+            </div>
+            
+            <div class="button-group">
+                <button onclick="encryptData()">🔒 Encrypt Data</button>
+                <button class="secondary-button" onclick="anonymizeAndEncrypt()">🎭 Anonymize + Encrypt</button>
+            </div>
+            
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="input-group" id="encryptedOutput" style="display:none;">
+                <label>Encrypted Data (Copy this to data.json):</label>
+                <textarea id="encryptedData" readonly></textarea>
+                <div class="button-group">
+                    <button class="success-button" onclick="downloadEncrypted()">📥 Download data.json</button>
+                    <button class="warning-button" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+                </div>
+                <div class="stats-grid" id="encryptStats" style="display:none;">
+                    <div class="stat-card">
+                        <div class="stat-value" id="recordCount">0</div>
+                        <div class="stat-label">Records</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="fileSize">0KB</div>
+                        <div class="stat-label">File Size</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="encryptTime">0s</div>
+                        <div class="stat-label">Process Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decrypt Tab -->
+        <div id="decrypt-tab" class="tab-content">
+            <div class="input-group">
+                <label for="encryptedFile">Select Encrypted JSON File:</label>
+                <input type="file" id="encryptedFile" accept=".json">
+            </div>
+            
+            <div class="input-group">
+                <label for="decryptPassword">Decryption Password:</label>
+                <input type="password" id="decryptPassword" placeholder="Enter the encryption password">
+            </div>
+            
+            <div class="button-group">
+                <button onclick="decryptData()">🔓 Decrypt Data</button>
+                <button class="secondary-button" onclick="validateDecryption()">✅ Validate Only</button>
+            </div>
+            
+            <div class="input-group" id="decryptedOutput" style="display:none;">
+                <label>Decrypted CSV Data:</label>
+                <textarea id="decryptedData" readonly></textarea>
+                <div class="button-group">
+                    <button class="success-button" onclick="downloadDecrypted()">📥 Download CSV</button>
+                    <button class="warning-button" onclick="previewDecrypted()">👁️ Preview Data</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Preview Tab -->
+        <div id="preview-tab" class="tab-content">
+            <div class="preview-container" id="previewContainer">
+                <div class="preview-title">Data Preview</div>
+                <div id="previewContent">
+                    <p style="color: #6c757d; text-align: center; padding: 20px;">
+                        No data loaded. Please select a file in the Encrypt tab or decrypt a file first.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <div class="instructions">
+            <h3>📋 Quick Start Guide:</h3>
+            <ol>
+                <li><strong>Prepare your data:</strong> Export your Kit Log as CSV from Excel/SharePoint</li>
+                <li><strong>Choose security level:</strong>
+                    <ul>
+                        <li><strong>"Encrypt Data"</strong> - Keeps original data, encrypted for authorized users</li>
+                        <li><strong>"Anonymize + Encrypt"</strong> - Replaces sensitive info, safe for demos</li>
+                    </ul>
+                </li>
+                <li><strong>Set password:</strong> Use a strong password (same as dashboard login)</li>
+                <li><strong>Deploy to GitHub:</strong>
+                    <ul>
+                        <li>Create public repo: <code>dashboard-data</code></li>
+                        <li>Upload <code>data.json</code> to main branch</li>
+                        <li>Access at: <code>https://raw.githubusercontent.com/[username]/dashboard-data/main/data.json</code></li>
+                    </ul>
+                </li>
+                <li><strong>Configure dashboard:</strong> Update data URL in dashboard config</li>
+            </ol>
+            
+            <h3>🔒 Security Features:</h3>
+            <ul>
+                <li>✅ AES-256 encryption (military-grade)</li>
+                <li>✅ Client-side only (no data sent to servers)</li>
+                <li>✅ Checksum validation</li>
+                <li>✅ Anonymization option for demos</li>
+                <li>✅ Safe for public hosting when encrypted</li>
+            </ul>
+            
+            <h3>⚡ Power Automate Integration:</h3>
+            <p>Automate daily updates with this flow:</p>
+            <code>SharePoint → Export CSV → Run Script → Git Push → Dashboard Updates</code>
+        </div>
+    </div>
+    
+    <script>
+        let originalCSVData = null;
+        let encryptedJSON = null;
+        let parsedData = null;
+        let startTime = null;
+        
+        // Company name mappings for anonymization
+        const companyMappings = {
+            'CUSTOMER': ['ALPHA CORP', 'BETA INDUSTRIES', 'GAMMA SYSTEMS', 'DELTA TECH', 'EPSILON GROUP', 
+                         'ZETA SOLUTIONS', 'ETA MANUFACTURING', 'THETA DYNAMICS', 'IOTA ENTERPRISES', 'KAPPA LOGISTICS']
+        };
+        
+        // Part number prefixes for anonymization
+        const partPrefixes = ['VTE', 'PTI', 'XRS', 'QWE', 'DFS', 'HJK', 'LMN', 'RST', 'UVW', 'XYZ'];
+        
+        function switchTab(tab) {
+            // Update tabs
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            if (tab === 'encrypt') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+                document.getElementById('encrypt-tab').classList.add('active');
+            } else if (tab === 'decrypt') {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                document.getElementById('decrypt-tab').classList.add('active');
+            } else if (tab === 'preview') {
+                document.querySelector('.tab:nth-child(3)').classList.add('active');
+                document.getElementById('preview-tab').classList.add('active');
+                updatePreview();
+            }
+        }
+        
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.className = 'status ' + type;
+            status.textContent = message;
+            status.style.display = 'block';
+            
+            if (type === 'success' || type === 'info') {
+                setTimeout(() => status.style.display = 'none', 5000);
+            }
+        }
+        
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const fileInfo = document.getElementById('fileInfo');
+            fileInfo.style.display = 'block';
+            fileInfo.innerHTML = `
+                <strong>File:</strong> ${file.name}<br>
+                <strong>Size:</strong> ${(file.size / 1024).toFixed(2)} KB<br>
+                <strong>Type:</strong> ${file.type || 'CSV'}
+            `;
+            
+            // Auto-read file for preview
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                originalCSVData = e.target.result;
+                parsedData = Papa.parse(originalCSVData, {
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true
+                });
+                
+                fileInfo.innerHTML += `<br><strong>Records:</strong> ${parsedData.data.length}`;
+                fileInfo.innerHTML += `<br><strong>Columns:</strong> ${Object.keys(parsedData.data[0] || {}).length}`;
+            };
+            reader.readAsText(file);
+        }
+        
+        async function encryptData() {
+            const fileInput = document.getElementById('csvFile');
+            const password = document.getElementById('encryptPassword').value;
+            
+            if (!fileInput.files[0]) {
+                showStatus('Please select a CSV file', 'error');
+                return;
+            }
+            
+            if (!password) {
+                showStatus('Please enter an encryption password', 'error');
+                return;
+            }
+            
+            startTime = Date.now();
+            showProgress(0);
+            
+            try {
+                const file = fileInput.files[0];
+                const text = await file.text();
+                originalCSVData = text;
+                
+                showProgress(30);
+                
+                // Encrypt the CSV data
+                const encrypted = CryptoJS.AES.encrypt(text, password).toString();
+                
+                showProgress(70);
+                
+                // Create JSON structure with metadata
+                encryptedJSON = {
+                    version: "2.0",
+                    encrypted: true,
+                    anonymized: false,
+                    timestamp: new Date().toISOString(),
+                    data: encrypted,
+                    checksum: CryptoJS.MD5(text).toString(),
+                    metadata: {
+                        records: parsedData ? parsedData.data.length : 0,
+                        fileSize: file.size,
+                        originalName: file.name
+                    }
+                };
+                
+                showProgress(100);
+                
+                // Display encrypted data
+                document.getElementById('encryptedData').value = JSON.stringify(encryptedJSON, null, 2);
+                document.getElementById('encryptedOutput').style.display = 'block';
+                
+                // Show stats
+                showEncryptionStats();
+                
+                showStatus('✅ Data encrypted successfully!', 'success');
+                
+                hideProgress();
+            } catch (error) {
+                showStatus('Error encrypting data: ' + error.message, 'error');
+                hideProgress();
+            }
+        }
+        
+        async function anonymizeAndEncrypt() {
+            const fileInput = document.getElementById('csvFile');
+            const password = document.getElementById('encryptPassword').value;
+            
+            if (!fileInput.files[0]) {
+                showStatus('Please select a CSV file', 'error');
+                return;
+            }
+            
+            if (!password) {
+                showStatus('Please enter an encryption password', 'error');
+                return;
+            }
+            
+            startTime = Date.now();
+            showProgress(0);
+            
+            try {
+                const file = fileInput.files[0];
+                const text = await file.text();
+                
+                showProgress(20);
+                
+                // Parse CSV properly with PapaParse
+                const parsed = Papa.parse(text, {
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true
+                });
+                
+                showProgress(40);
+                
+                // Anonymize data
+                const anonymizedData = parsed.data.map((row, index) => {
+                    const anonymizedRow = { ...row };
+                    
+                    // Anonymize customer names
+                    if (row['Customer']) {
+                        anonymizedRow['Customer'] = companyMappings['CUSTOMER'][index % companyMappings['CUSTOMER'].length];
+                    }
+                    
+                    // Anonymize part numbers
+                    if (row['Assembly']) {
+                        const prefix = partPrefixes[index % partPrefixes.length];
+                        anonymizedRow['Assembly'] = `${prefix}-${Math.floor(Math.random() * 9000) + 1000}`;
+                    }
+                    
+                    // Anonymize job orders
+                    if (row['Job Orders']) {
+                        anonymizedRow['Job Orders'] = `JOB-${Math.floor(Math.random() * 90000) + 10000}`;
+                    }
+                    
+                    // Anonymize values
+                    if (row['WO Value']) {
+                        const originalValue = parseFloat(row['WO Value']) || 0;
+                        anonymizedRow['WO Value'] = (originalValue * (0.8 + Math.random() * 0.4)).toFixed(2);
+                    }
+                    
+                    return anonymizedRow;
+                });
+                
+                showProgress(60);
+                
+                // Convert back to CSV
+                const anonymizedCSV = Papa.unparse(anonymizedData);
+                
+                showProgress(80);
+                
+                // Encrypt the anonymized data
+                const encrypted = CryptoJS.AES.encrypt(anonymizedCSV, password).toString();
+                
+                // Create JSON structure
+                encryptedJSON = {
+                    version: "2.0",
+                    encrypted: true,
+                    anonymized: true,
+                    timestamp: new Date().toISOString(),
+                    data: encrypted,
+                    checksum: CryptoJS.MD5(anonymizedCSV).toString(),
+                    metadata: {
+                        records: anonymizedData.length,
+                        fileSize: file.size,
+                        originalName: file.name + '_anonymized'
+                    }
+                };
+                
+                showProgress(100);
+                
+                // Display encrypted data
+                document.getElementById('encryptedData').value = JSON.stringify(encryptedJSON, null, 2);
+                document.getElementById('encryptedOutput').style.display = 'block';
+                
+                // Show stats
+                showEncryptionStats();
+                
+                showStatus('✅ Data anonymized and encrypted successfully!', 'success');
+                
+                hideProgress();
+            } catch (error) {
+                showStatus('Error processing data: ' + error.message, 'error');
+                hideProgress();
+            }
+        }
+        
+        async function decryptData() {
+            const fileInput = document.getElementById('encryptedFile');
+            const password = document.getElementById('decryptPassword').value;
+            
+            if (!fileInput.files[0]) {
+                showStatus('Please select an encrypted JSON file', 'error');
+                return;
+            }
+            
+            if (!password) {
+                showStatus('Please enter the decryption password', 'error');
+                return;
+            }
+            
+            try {
+                const file = fileInput.files[0];
+                const text = await file.text();
+                const json = JSON.parse(text);
+                
+                // Decrypt the data
+                const decrypted = CryptoJS.AES.decrypt(json.data, password).toString(CryptoJS.enc.Utf8);
+                
+                if (!decrypted) {
+                    throw new Error('Invalid password or corrupted data');
+                }
+                
+                // Verify checksum
+                const checksum = CryptoJS.MD5(decrypted).toString();
+                if (checksum !== json.checksum) {
+                    showStatus('⚠️ Warning: Data integrity check failed', 'warning');
+                }
+                
+                // Display decrypted data
+                document.getElementById('decryptedData').value = decrypted;
+                document.getElementById('decryptedOutput').style.display = 'block';
+                
+                // Parse for preview
+                parsedData = Papa.parse(decrypted, {
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true
+                });
+                
+                const status = json.anonymized ? 
+                    '✅ Data decrypted successfully! (Anonymized version)' : 
+                    '✅ Data decrypted successfully!';
+                showStatus(status, 'success');
+            } catch (error) {
+                showStatus('Error decrypting data: ' + error.message, 'error');
+            }
+        }
+        
+        async function validateDecryption() {
+            const fileInput = document.getElementById('encryptedFile');
+            const password = document.getElementById('decryptPassword').value;
+            
+            if (!fileInput.files[0]) {
+                showStatus('Please select an encrypted JSON file', 'error');
+                return;
+            }
+            
+            if (!password) {
+                showStatus('Please enter the decryption password', 'error');
+                return;
+            }
+            
+            try {
+                const file = fileInput.files[0];
+                const text = await file.text();
+                const json = JSON.parse(text);
+                
+                // Try to decrypt
+                const decrypted = CryptoJS.AES.decrypt(json.data, password).toString(CryptoJS.enc.Utf8);
+                
+                if (!decrypted) {
+                    showStatus('❌ Invalid password', 'error');
+                } else {
+                    showStatus('✅ Password is correct! File can be decrypted.', 'success');
+                }
+            } catch (error) {
+                showStatus('Error validating: ' + error.message, 'error');
+            }
+        }
+        
+        function downloadEncrypted() {
+            if (!encryptedJSON) return;
+            
+            const blob = new Blob([JSON.stringify(encryptedJSON, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            showStatus('📥 Downloaded data.json', 'info');
+        }
+        
+        function downloadDecrypted() {
+            const data = document.getElementById('decryptedData').value;
+            if (!data) return;
+            
+            const blob = new Blob([data], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'decrypted_data.csv';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            showStatus('📥 Downloaded decrypted_data.csv', 'info');
+        }
+        
+        function copyToClipboard() {
+            const data = document.getElementById('encryptedData');
+            data.select();
+            document.execCommand('copy');
+            showStatus('📋 Copied to clipboard!', 'info');
+        }
+        
+        function showProgress(percent) {
+            const progressBar = document.getElementById('progressBar');
+            const progressFill = document.getElementById('progressFill');
+            
+            progressBar.classList.add('active');
+            progressFill.style.width = percent + '%';
+        }
+        
+        function hideProgress() {
+            setTimeout(() => {
+                document.getElementById('progressBar').classList.remove('active');
+                document.getElementById('progressFill').style.width = '0%';
+            }, 500);
+        }
+        
+        function showEncryptionStats() {
+            const stats = document.getElementById('encryptStats');
+            stats.style.display = 'grid';
+            
+            // Record count
+            document.getElementById('recordCount').textContent = 
+                parsedData ? parsedData.data.length : '0';
+            
+            // File size
+            const sizeKB = (JSON.stringify(encryptedJSON).length / 1024).toFixed(1);
+            document.getElementById('fileSize').textContent = sizeKB + 'KB';
+            
+            // Process time
+            const processTime = ((Date.now() - startTime) / 1000).toFixed(1);
+            document.getElementById('encryptTime').textContent = processTime + 's';
+        }
+        
+        function updatePreview() {
+            const previewContent = document.getElementById('previewContent');
+            
+            if (!parsedData || !parsedData.data || parsedData.data.length === 0) {
+                previewContent.innerHTML = `
+                    <p style="color: #6c757d; text-align: center; padding: 20px;">
+                        No data loaded. Please select a file in the Encrypt tab or decrypt a file first.
+                    </p>
+                `;
+                return;
+            }
+            
+            // Create preview table
+            const headers = Object.keys(parsedData.data[0]);
+            const previewRows = parsedData.data.slice(0, 10); // Show first 10 rows
+            
+            let tableHTML = '<table class="preview-table"><thead><tr>';
+            
+            // Add headers
+            headers.forEach(header => {
+                tableHTML += `<th>${header}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Add rows
+            previewRows.forEach(row => {
+                tableHTML += '<tr>';
+                headers.forEach(header => {
+                    const value = row[header] || '';
+                    const isAnonymized = encryptedJSON && encryptedJSON.anonymized;
+                    const cellClass = isAnonymized ? 'anonymized-cell' : '';
+                    tableHTML += `<td class="${cellClass}">${value}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody></table>';
+            
+            if (parsedData.data.length > 10) {
+                tableHTML += `<p style="text-align: center; color: #6c757d; margin-top: 10px;">
+                    Showing 10 of ${parsedData.data.length} records
+                </p>`;
+            }
+            
+            previewContent.innerHTML = tableHTML;
+        }
+        
+        function previewDecrypted() {
+            const decryptedData = document.getElementById('decryptedData').value;
+            if (!decryptedData) return;
+            
+            parsedData = Papa.parse(decryptedData, {
+                header: true,
+                dynamicTyping: true,
+                skipEmptyLines: true
+            });
+            
+            switchTab('preview');
+        }
+        
+        function loadSampleData() {
+            // Create sample CSV data
+            const sampleData = `Job Orders,Customer,Assembly,Rev,QTY,BOM Size,STATUS,Priority September Kit Pull,Ship Date,WO Value
+JOB-12345,ACME CORP,PART-1001,A,10,25,Released,P9 Sep,2024-12-31,15000
+JOB-12346,TECH INDUSTRIES,PART-2002,B,5,30,CO,P10 Oct,2024-12-15,22000
+JOB-12347,GLOBAL SYSTEMS,PART-3003,C,8,15,Firm,P11 Nov,2024-11-30,18500
+JOB-12348,INNOVATION LLC,PART-4004,A,12,20,Released,P9 Sep,2024-12-20,31000
+JOB-12349,ENTERPRISE SOLUTIONS,PART-5005,D,3,35,Released,P12 Dec,2025-01-15,12750`;
+            
+            // Create a blob and simulate file selection
+            const blob = new Blob([sampleData], { type: 'text/csv' });
+            const file = new File([blob], 'sample_data.csv', { type: 'text/csv' });
+            
+            // Create a DataTransfer object to simulate file input
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+            
+            const fileInput = document.getElementById('csvFile');
+            fileInput.files = dataTransfer.files;
+            
+            // Trigger the file select handler
+            const event = new Event('change', { bubbles: true });
+            handleFileSelect({ target: fileInput });
+            
+            // Set a sample password
+            document.getElementById('encryptPassword').value = 'demo123';
+            
+            showStatus('📊 Sample data loaded! Password set to: demo123', 'info');
+        }
+        
+        function testEncryption() {
+            // Load sample data first
+            loadSampleData();
+            
+            // Wait a moment for the data to load, then encrypt
+            setTimeout(() => {
+                encryptData();
+                
+                // After encryption, show how to decrypt
+                setTimeout(() => {
+                    showStatus('🧪 Test complete! Now try the Decrypt tab with password: demo123', 'info');
+                }, 2000);
+            }, 500);
+        }
+        
+        function showHelp() {
+            const helpMessage = `
+🔐 ENCRYPTION TOOL HELP
+
+📊 DATA FORMATS SUPPORTED:
+• CSV files exported from Excel/SharePoint
+• Kit Log data with any number of columns
+• Files up to 10MB
+
+🔒 SECURITY LEVELS:
+• Encrypt Only: Keeps real data, password-protected
+• Anonymize + Encrypt: Replaces sensitive info, safe for demos
+
+💡 TIPS:
+• Use strong passwords (min 8 characters)
+• Save encrypted files with descriptive names
+• Test decryption before deploying
+• Keep original files as backup
+
+🚀 DEPLOYMENT:
+1. Create GitHub repo (public is OK)
+2. Upload data.json file
+3. Get raw URL from GitHub
+4. Update dashboard config
+
+⚠️ COMMON ISSUES:
+• Wrong password → Check caps lock
+• Large files → Split into batches
+• Special characters → Use UTF-8 encoding
+
+📧 Need help? Check the documentation or contact support.
+            `;
+            
+            alert(helpMessage);
+        }
+        
+        // Auto-focus password field when pressing Enter on file input
+        document.addEventListener('DOMContentLoaded', function() {
+            const csvFile = document.getElementById('csvFile');
+            const encryptPassword = document.getElementById('encryptPassword');
+            const decryptPassword = document.getElementById('decryptPassword');
+            
+            csvFile.addEventListener('change', function() {
+                if (this.files[0]) {
+                    encryptPassword.focus();
+                }
+            });
+            
+            encryptPassword.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    encryptData();
+                }
+            });
+            
+            decryptPassword.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    decryptData();
+                }
+            });
+        });
+        
+        // Add drag and drop support
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                container.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                container.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                container.addEventListener(eventName, unhighlight, false);
+            });
+            
+            function highlight(e) {
+                container.style.border = '3px dashed #667eea';
+                container.style.background = '#f0f4ff';
+            }
+            
+            function unhighlight(e) {
+                container.style.border = '';
+                container.style.background = '';
+            }
+            
+            container.addEventListener('drop', handleDrop, false);
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                
+                if (files.length > 0) {
+                    const file = files[0];
+                    
+                    // Determine file type and handle accordingly
+                    if (file.name.endsWith('.csv') || file.name.endsWith('.txt')) {
+                        // Handle CSV file
+                        const csvInput = document.getElementById('csvFile');
+                        csvInput.files = files;
+                        handleFileSelect({ target: csvInput });
+                        switchTab('encrypt');
+                        showStatus('📁 CSV file loaded via drag & drop', 'info');
+                    } else if (file.name.endsWith('.json')) {
+                        // Handle JSON file for decryption
+                        const jsonInput = document.getElementById('encryptedFile');
+                        jsonInput.files = files;
+                        switchTab('decrypt');
+                        showStatus('📁 JSON file loaded via drag & drop', 'info');
+                    } else {
+                        showStatus('❌ Unsupported file type. Please use CSV or JSON files.', 'error');
+                    }
+                }
+            }
+        });
+        
+        // Check for URL parameters (for automation)
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const action = urlParams.get('action');
+            
+            if (action === 'demo') {
+                loadSampleData();
+                setTimeout(() => {
+                    showStatus('🎯 Demo mode activated with sample data', 'info');
+                }, 500);
+            }
         });
